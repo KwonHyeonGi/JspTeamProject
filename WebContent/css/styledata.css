@@ -1,0 +1,610 @@
+ /* RollingBanner 구현 파트 설정  */
+	 .main_banner {
+	 	position: relative;
+	 	left: 20px;
+    	top: 265px;
+    	width: 1000px;
+    	height: 250px;
+	 }
+	 /*메인배너 왼쪽 버튼*/
+	 .main_banner .owl-prev {
+	 	position: absolute;
+	 	top: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	width: 100px;
+	 	outline: none;
+	 }
+	 /*메인배너 왼쪽 버튼 이후 상태*/
+	 .main_banner .owl-prev::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -328px -651px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 /*메인배너 오른쪽 버튼*/
+	 .main_banner .owl-next {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	outline: none;
+	 	width: 100px;
+	 }
+	 /*메인배너 오른쪽 버튼 이후 상태*/
+	 .main_banner .owl-next::before {
+	 	position: absolute;
+	 	top: 0;
+	 	right: 0;
+	 	bottom: 0;
+	 	left: 0;
+	 	background-position: -1056px -369px;
+	 	background-repeat: no-repeat;
+	 	width: 22px;
+	 	height: 38px;
+	 	content: "";
+	 	margin: auto;
+	 }
+	 .main_banner .item {
+	 	padding-top: 250px;
+	 	height: 250px;
+	 	box-sizing: border-box;
+	 	color: #fff;
+	 	text-align: center;
+	 }
+	 .main_banner .item.first {
+	 	background: no-repeat url("../images/first1.png");
+	 }
+	 .main_banner .item.second {
+	 	background: no-repeat url("../images/second.png");
+	 }
+	 .main_banner .item.third {
+	 	background: no-repeat url("../images/third.png");
+	 }
+	 .main_banner .item .title {
+	 	display: inline-block;
+	 	font-family: 'Jua', sans-serif;
+	 	vertical-align: text-top;
+	 	line-height: 45px;
+	 	font-size: 30px;
+	 	letter-spacing: -2.5px;
+	 	font-weight: normal;
+	 	position: relative;
+	 	top: -140px;
+	 }
+	 .main_banner .item .title .em {
+	 	display: block;
+	 }
+	 /*
+	 .main_banner .item .title::before {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: -55px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "[";
+	 }
+	 .main_banner .item .title::after {
+	 	position: absolute;
+	 	vertical-align: top;
+	 	top: 35px;
+	 	left: 755px;
+	 	font-size: 124px;
+	 	font-weight: 100;
+	 	content: "]";
+	 }
+	 */
+	 .main_banner .item .subtitle{
+	 	display: block;
+	 	font-family: 'Black Han Sans', sans-serif;
+	 	vertical-align: top;
+	 	margin-top: 20px;
+	 	font-size: 18px;
+	 	line-height: normal;
+	 	letter-spacing: -1.2px;
+	 	position: relative;
+	 	top: -160px;
+	 }
+	 
+	 @media screen and (max-width: 998px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 35px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 }
+	 @media screen and (max-width: 768px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 30px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		font-size: 92px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 20px;
+	 	}
+	 }
+	 	 @media screen and (max-width: 475px){
+	 	.main_banner {
+	 		height: 250px;
+	 	}
+	 	.main_banner .item{
+	 		background: no-repeat url("../images/first1.png");
+	 		padding-top: 250px;
+	 		height: 250px;
+	 	}
+	 	.main_banner .item .title{
+	 		font-size: 24px;
+	 		line-height: 40px;
+	 	}
+	 	.main_banner .item .title::before, .main_banner .item .title::after{
+	 		top: 20px;
+	 		font-size: 70px;
+	 	}
+	 	.main_banner .item .title::before{
+	 		left: -30px;
+	 	}
+	 	.main_banner .item .title::after{
+	 		right: -30px;
+	 	}
+	 	.main_banner .item .subtitle{
+	 		font-size: 16px;
+	 	}
+	 }
+	 /* 3D 버튼 CSS 구현 파트 설정  */
+	.button-3d {
+	  position:relative;
+	  width: auto;
+	  display:inline-block;
+	  color:#ecf0f1;
+	  text-decoration:none;
+	  border-radius:5px;
+	  border:solid 1px #f39c12;
+	  background:#e67e22;
+	  text-align:center;
+	  padding:10px 12px 8px;
+	  margin: 6px;
+	  
+	  -webkit-transition: all 0.1s;
+		-moz-transition: all 0.1s;
+		transition: all 0.1s;
+		
+	  -webkit-box-shadow: 0px 6px 0px #d35400;
+	  -moz-box-shadow: 0px 6px 0px #d35400;
+	  box-shadow: 0px 6px 0px #d35400;
+	}
+	
+	.button-3d:active{
+	    -webkit-box-shadow: 0px 2px 0px #d35400;
+	    -moz-box-shadow: 0px 2px 0px #d35400;
+	    box-shadow: 0px 2px 0px #d35400;
+	    position:relative;
+	    top:4px;
+	}
+	/* 초기 배경 색깔 설정 */
+	body{
+		background-color: #0b0e2c;
+	}
+	/* 상위 배너 및 검색바 위치 및 스타일 설정  */
+    #webbanner{
+    	position: absolute;
+    	left: 200px;
+    }
+    #searchinput{
+    	position: absolute;
+    	left: 1100px;
+    	top: 75px;
+    	width: 300px;
+    	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    #searchicon{
+    	position: absolute;
+    	left: 1050px;
+    	top: 70px;
+    }
+    /*메인 페이지 CSS 설정*/
+    #benana {
+    	position: absolute;
+    }
+    #main{
+    	font-family: 'Black Han Sans', sans-serif;
+    	border: solid 10px none;
+    	position: absolute;
+    	left: 20px;
+    	top: 545px;
+     	width: 1000px;
+     	height: 500px;
+     	padding: 50px;
+        background-color:#FFFFFF;
+        overflow: auto;
+    }
+    #login{
+        font-family: 'Black Han Sans', sans-serif;
+        border: solid 5px none;
+    	border-radius: 5px;
+    	position: absolute;
+    	left: 1050px;
+    	top: 265px;
+    	width: 450px;
+        height: 200px;
+        text-align: center;
+        background-color: #FFFFFF;
+    }
+    #login_btn {
+    	margin-top : 80px;
+    }
+    #login_text{
+    	position: relative;
+    	top: 60px;
+    	padding: 10px;
+    	border-radius: 5px;
+    	background-color: #F2E0F7;
+    }
+    #menu{
+    	border-radius: 5px;
+    	border: solid 10px none;
+    	position: absolute;
+    	text-align: center;
+    	left: 1050px;
+    	top: 480px;
+    	width: 450px;
+        height:565px;
+        background-color: #FFFFFF;
+    }
+    #menu_text {
+    	position: relative;
+    	top: 50px;
+    	font-family: 'Black Han Sans', sans-serif;
+    	font-size: 30px;
+    }
+    #menu_img {
+    	position: relative;
+    	top: 100px;
+    }
+    #menu_hr{
+    	position: relative;
+    	top: 60px;
+    	border-top: 3px dashed red;
+    }
+    #selectone {
+    	position: absolute;
+    	left: 1300px;
+    }
+    #selecttwo {
+    	position: absolute;
+    	left: 1350px;
+    }
+   	/*로그인 화면 및 회원가입 CSS 설정*/
+    #login_box{
+    	font-family: 'Jua', sans-serif;
+    	border-radius: 10px;
+    	background-color: none;
+    	border: 10px solid #BDBDBD;
+    	position: absolute;
+    	top: 200px;
+    	left: 550px;
+    	width: 400px;
+    	height: 500px;
+    	padding: 20px;
+    	text-align: center;
+    	color: #BDBDBD;
+    }
+    #login_title{
+    	font-family: 'Do Hyeon', sans-serif;
+    	font-size: 25px;
+    }
+    #input_bar{
+    	margin: 10px;
+    	border-radius: 10px;
+    	width: 200px;
+    }
+    #login_set {
+    	margin-top: 20px; 
+    	width: 300px;
+    	font-size: 20px;
+    }
+    /*게시판 작성 CSS 설정*/
+    #board_title{
+    	font-family: 'Black Han Sans', sans-serif;
+    	font-size: 50px;
+    	position: absolute;
+    	top: 250px;
+    	left: 650px;
+    	color: #ffffff;
+    }
+    #title_pos_one{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 340px;
+    	left: 270px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_pos_two{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 340px;
+    	left: 150px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_input_one{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	width: 850px;
+    	color: #000000;
+    }
+    #title_input_two{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	width: 200px;
+    	color: #000000;
+    }
+    #title_text_one{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 850px;
+    	color: #000000;
+    }
+    #title_text_two{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 200px;
+    	color: #000000;
+    }
+    #text_area_box{
+    	display: block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	top: 410px;
+    	left: 270px;
+    	width: 931.6px;
+    	height: 500px;
+    	border-radius: 5px;
+    	overflow: auto;
+    }
+    #text_area_view{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	top: 490px;
+    	left: 150px;
+    	width: 1221.6px;
+    	height: 500px;
+    	background-color: #ffffff;
+    	border-radius: 5px;
+    	overflow: auto;
+    }
+    #title_id {
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 150px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_id {
+        display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 300px;
+    	color: #000000;
+    }
+    #title_count{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 1021.6px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_count{
+        display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 250px;
+    	color: #000000;
+    }
+    #board_btn{
+    	position: absolute;
+    	top: 930px;
+    	left: 1141.6px;
+    }
+    #board_btn_back{
+    	position: absolute;
+    	top: 1000px;
+    	left: 600px;
+    }
+    #btn_back_index{
+    	position: absolute;
+    	top: 930px;
+    	left: 270px;
+    }
+	#update_box{
+		font-family: 'Jua', sans-serif;
+    	border-radius: 10px;
+    	background-color: none;
+    	border: 10px solid #BDBDBD;
+    	position: absolute;
+    	top: 200px;
+    	left: 350px;
+    	width: 700px;
+    	height: 850px;
+    	padding: 20px;
+    	text-align: center;
+    	color: #BDBDBD;
+	}
+	#update_input #update_input_bar{
+		text-align: center;
+	}
+	#update_text{
+		font-family: 'Black Han Sans', sans-serif; 
+		font-size: 25px;
+		position: relative;
+		left: 170px;
+	}
+	#update_input_bar{
+		position: relative;
+		left: 170px;
+		margin: 10px;
+    	border-radius: 10px;
+    	width: 200px;
+	}
+	#update_set {
+		position: relative;
+		top: 300px;
+    	margin-top: 20px; 
+    	width: 300px;
+    	font-size: 20px;
+    }
+    #board_change_input{
+    	position: absolute;
+    	left:1250px;
+    	top: 290px;
+    }
+    #freeboard_list{
+    	position: absolute;
+    	top: 400px;
+    	left: 250px;
+    	width: 1000px;
+    	height: 250px;
+    	background-color: #ffffff;
+    	overflow: auto;
+    }
+    #free_banner{
+    	position: absolute;
+    	left: 250px;
+    	top: 200px;
+    	width:1000px;
+    	height: 200px;
+    }
+    #title_uploadfile{
+    	display: inline;
+    	font-family: 'Do Hyeon', sans-serif;
+    	position: absolute;
+    	font-size: 25px;
+    	top: 415px;
+    	left: 990px;
+    	background-color:#BDBDBD;
+    	padding: 10px;
+    	border-radius: 5px;
+    	color: #ffffff;
+    }
+    #title_text_uplodfile{
+    	display: inline-block;
+    	font-family: 'Do Hyeon', sans-serif;
+    	border-radius: 10px;
+    	font-size: 25px;
+    	background-color: #ffffff;
+    	padding: 5px;
+    	width: 300px;
+    	color: #000000;
+    }
+    #infboard_list{
+    	position: absolute;
+    	top: 400px;
+    	left: 250px;
+    	width: 1000px;
+    	height: 250px;
+    	background-color: #ffffff;
+    	overflow: auto;
+    }
+    #inf_board_title{
+    	font-family: 'Black Han Sans', sans-serif;
+    	font-size: 50px;
+    	position: absolute;
+    	top: 250px;
+    	left: 580px;
+    	color: #ffffff;
+    }
+    #upload_btn{
+    	position: absolute;
+    	left: 400px;
+    	top: 915px;
+    	padding: 10px;
+    	
+    }
+    #userlist{
+    	border-radius: 10px;
+    	background-color: #f5a4aa;
+    	position: absolute;
+    	padding: 50px;
+    	top: 300px;
+    	left: 300px;
+    	width: 900px;
+    	height: 400px;
+    	text-align: center;
+    	overflow: auto;
+    }
+    #userbox{
+    	border-radius: 10px;
+    	background-color: #8000ff;
+    	position: absolute;
+    	top: 200px;
+    	left: 300px;
+    	width: 900px;
+    	height: 100px;
+    	padding: 30px;
+    	text-align: center;
+    }
+    .box{
+    	margin: 10%;
+    }
